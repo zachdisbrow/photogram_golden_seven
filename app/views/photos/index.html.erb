@@ -1,0 +1,54 @@
+<h1>All Photos</h1>
+
+<a class="btn btn-default btn block" href= "/photos/new"
+   Add a new photo </a>
+
+<% @all_photos.each do |the_photo| %>
+
+<div class="thumbnail">
+
+
+<img src="<%=the_photo.source %>">
+
+  <a href="/photos/<%= the_photo.id%>>" class= "btn btn-default btn block">
+     Show Details
+   </a>
+  #the_photo.id pulls the id part of the information attached to "the photo"
+
+  <a class="btn btn-default btn-block" href="/photos/<%= the_photo.id %>/edit">
+  edit
+</a>
+
+  <a class="btn btn-default btn block" href="/delete_photo/<% the_photo.id %>">
+     Delete
+   </a>
+</div>
+<%end%>
+
+<img src="<% @the_image_url %>">
+
+<a>
+Show Details
+</a>
+
+<a>
+Edit
+</a>
+
+<a>
+Delete
+</a>
+
+<img src="<% @the_image_url %>">
+
+<a>
+Show Details
+</a>
+
+<a>
+Edit
+</a>
+
+<a>
+Delete
+</a>
